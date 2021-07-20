@@ -1,0 +1,719 @@
+.wrapper {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transform: scale(0.55) translate(42%, 36%);
+  
+    .swing {
+      position: absolute;
+      width: 70px;
+      height: 100%;
+  
+      .swing-rod {
+        position: absolute;
+        width: 5px;
+        height: 100px;
+        background: rgba(146, 146, 146, 0);
+      }
+  
+      &.animate {
+        transform-origin: center top;
+        animation: 
+        swing-1 0.5s linear 0.3s forwards,
+        swing-2 0.3s linear 0.9s forwards,
+        swing-3 0.1s linear 1.2s forwards,
+        swing-4 0.7s ease-out 1.3s forwards,
+        reset 0.1s linear 3s forwards
+      }
+  
+    }
+  }
+  
+  .golfer-wrapper {
+    cursor: pointer;
+    width: 100px;
+    transform: scale(0.5);
+    .golfer {
+      position: absolute;
+  
+      .hair2, .hair3 {
+        opacity: 0;
+      }
+  
+      .right-calf, .left-calf {
+        transform: translate(0, 0);
+      }
+  
+      &.animate {
+  
+      .hair {
+        animation: 
+        hair-1-1 0.5s linear 0.3s forwards,
+        hair-1-2 0.3s linear 0.9s forwards,
+        hair-1-3 0.1s linear 3s forwards
+      }
+  
+      .hair2 {
+        animation: 
+        hair-2-1 0.5s linear 0.3s forwards,
+        hair-2-2 0.3s linear 0.9s forwards,
+        hair-2-3 0.1s linear 3s forwards
+      }
+  
+      .hair3 {
+        animation: 
+        hair-3-1 0.5s linear 0.3s forwards,
+        hair-3-2 0.3s linear 0.9s forwards,
+        hair-3-3 0.1s linear 3s forwards
+      }
+  
+      .head {
+        animation: 
+        head-1 0.5s linear 0.3s forwards,
+        head-2 0.3s linear 0.9s forwards,
+        reset 0.1s linear 3s forwards
+  
+      }
+  
+      .undershirt {
+        animation: 
+        under-1 0.5s linear 0.3s forwards,
+        under-2 0.3s linear 0.9s forwards,
+        reset 0.1s linear 3s forwards
+  
+      }
+  
+      .torso {
+        position: relative;
+        animation: 
+        torso-1 0.5s linear 0.3s forwards,
+        torso-2 0.3s linear 0.9s forwards,
+        reset 0.1s linear 3s forwards
+      }
+  
+      .left-arm-upper {
+        position: relative;
+        transform-origin: 20px 230px;
+        animation: 
+        left-arm-1 0.5s linear 0.3s forwards,
+        left-arm-2 0.3s linear 0.9s forwards,
+        reset 0.1s linear 3s forwards
+      }
+  
+      .left-arm-lower {
+        position: relative;
+        transform-origin: 20px 230px;
+        animation: 
+        left-arm-1 0.5s linear 0.3s forwards,
+        left-arm-2 0.3s linear 0.9s forwards,
+        left-arm-lower-3 0.1s linear 1.2s forwards,
+        reset 0.1s linear 3s forwards
+      }
+  
+      .right-arm-upper {
+        transform-origin: 130px 230px;
+        animation: 
+        right-arm-upper-1 0.5s linear 0.3s forwards,
+        right-arm-upper-2 0.3s linear 0.9s forwards,
+        reset 0.1s linear 3s forwards
+      }
+  
+      .right-arm-lower {
+        transform-origin: 130px 230px;
+        animation: 
+        right-arm-lower-1 0.5s linear 0.3s forwards,
+        right-arm-lower-2 0.3s linear 0.9s forwards,
+        right-arm-lower-3 0.1s linear 1.2s forwards,
+        reset 0.1s linear 3s forwards
+      }
+  
+      .right-thigh {
+        animation: 
+        right-thigh-1 0.5s linear 0.3s forwards,
+        right-thigh-2 0.3s linear 0.9s forwards,
+        reset 0.1s linear 3s forwards
+  
+      }
+  
+      .left-thigh {
+        animation: 
+        left-thigh-1 0.5s linear 0.3s forwards,
+        left-thigh-2 0.3s linear 0.9s forwards,
+        reset 0.1s linear 3s forwards
+  
+      }
+  
+      .right-calf {
+      transform: scaleY(1.2) translateY(10px);
+        transform-origin: bottom;
+        transform-box: stroke-box;
+        animation: 
+        right-calf-1 0.5s linear 0.3s forwards,
+        right-calf-2 0.3s linear 0.9s forwards,
+        reset 0.1s linear 3s forwards
+  
+      }
+  
+      .left-calf {
+      transform: scaleY(1.2) translateY(10px);
+        transform-origin: bottom;
+        transform-box: stroke-box;
+        animation: 
+        left-calf-1 0.5s linear 0.3s forwards,
+        left-calf-2 0.3s linear 0.9s forwards,
+        reset 0.1s linear 3s forwards
+  
+      }
+  
+      .right-foot {
+        transform-origin: bottom ;
+        transform-box: stroke-box;
+        animation: 
+        right-foot-1 0.5s linear 0.3s forwards,
+        right-foot-2 0.3s linear 0.9s forwards,
+        reset 0.1s linear 3s forwards
+  
+      }
+    }
+    }
+  }
+  
+  @keyframes hair-1-1 {
+    0% {
+    }
+    100% {
+      transform: translateX(5%);
+    }
+  }
+  @keyframes hair-1-2 {
+    0% {
+      opacity: 1;
+      transform: translateX(5%);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateX(0%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-8%);
+    }
+  }
+  @keyframes hair-1-3 {
+    0% {
+      opacity: 0;
+      transform: translateX(-8%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+  @keyframes hair-2-1 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(5%);
+    }
+  }
+  @keyframes hair-2-2 {
+    0% {
+      opacity: 0;
+      transform: translateX(5%);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateX(0%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-8%);
+    }
+  }
+  @keyframes hair-2-3 {
+    0% {
+      opacity: 0;
+      transform: translateX(-8%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(0%);
+    }
+  }
+  @keyframes hair-3-1 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(5%);
+    }
+  }
+  @keyframes hair-3-2 {
+    0% {
+      opacity: 0;
+      transform: translateX(5%);
+    }
+    50% {
+      opacity: 0;
+      transform: translateX(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-8%);
+    }
+  }
+  @keyframes hair-3-3 {
+    0% {
+      opacity: 1;
+      transform: translateX(-8%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(0%);
+    }
+  }
+  //head animation
+  @keyframes head-1 {
+    0%{
+  
+    }
+    100% {
+      transform: translateX(5%);
+    }
+  }
+  @keyframes head-2 {
+    0%{
+      transform: translateX(5%);
+    }
+    100% {
+      transform: translateX(-8%);
+    }
+  }
+  @keyframes head-3 {
+    0%{
+      transform: translateX(-8%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  //undershirt animation
+  @keyframes under-1 {
+    0%{
+  
+    }
+    100% {
+      transform: scaleX(0.7) translateX(25%);
+    }
+  }
+  @keyframes under-2 {
+    0%{
+      transform: scaleX(0.7) translateX(25%);
+    }
+    20%{
+      transform: scaleX(0.8) translateX(25%);
+    }
+    100% {
+      transform: scaleX(0.7) translateX(5%) translateY(0%);
+    }
+  }
+  @keyframes under-3 {
+    0%{
+      transform: scaleX(0.7) translateX(5%);
+    }
+    100% {
+      transform: scaleX(1) translateX(0%) translateY(0%);
+    }
+  }
+  //torso animation
+  @keyframes torso-1 {
+    0%{
+  
+    }
+    100% {
+      transform: scaleX(0.7) translateX(25%);
+    }
+  }
+  @keyframes torso-2 {
+    0%{
+      transform: scaleX(0.7) translateX(25%);
+    }
+    50% {
+      transform: scaleX(1) translateX(0%);
+    }
+    100% {
+      transform: scaleX(0.7) translateX(5%);
+    }
+  }
+  @keyframes torso-3 {
+    0%{
+      transform: scaleX(0.7) translateX(5%);
+    }
+    100% {
+      transform: scaleX(1) translateX(0%);
+    }
+  }
+  // right arm animation
+  @keyframes right-arm-upper-1 {
+    0% {
+      transform: rotate(0deg);
+    }
+    40% {
+      transform: rotate(-45deg);
+    }
+    100% {
+      transform: rotate(-90deg);
+    }
+  }
+  @keyframes right-arm-lower-1 {
+    0% {
+      transform: rotate(0deg);
+    }
+    40% {
+      transform: rotate(-95deg) translateY(-30px) translateX(-30px);
+    }
+    75% {
+      transform: rotate(-150deg) translateY(-60px) translateX(-30px);
+    }
+    100% {
+      transform: rotate(-210deg) translateY(-100px) translateX(-20px);
+    }
+  }
+  @keyframes right-arm-upper-2 {
+    0% {
+      transform: rotate(-90deg);
+    }
+    25% {
+      transform: rotate(-10deg) translateX(-15px) translateY(10px);
+    }
+    50% {
+      transform: rotate(20deg) translateX(-30px) translateY(20px);
+    }
+    75% {
+      transform: rotate(60deg) translateY(60px) translateX(-30px);
+    }
+    100% {
+      transform: rotate(140deg) translateY(40px) translateX(60px) ;
+    }
+  }
+  @keyframes right-arm-lower-2 {
+    0% {
+      transform: rotate(-210deg) translateY(-100px) translateX(-20px);
+    }
+    25% {
+      transform: rotate(-150deg) translateY(-100px) translateX(0px) scaleY(0.6);
+    }
+    35% {
+      transform: rotate(-85deg) translateY(-70px) translateX(-60px) scaleY(0.7);
+    }
+    50% {
+      transform: rotate(-30deg) translateY(-40px) translateX(-60px);
+    }
+    75% {
+      transform: rotate(45deg) translateY(40px) translateX(-60px);
+    }
+    100% {
+      transform: rotate(140deg) translateY(40px) translateX(60px);
+    }
+  }
+  @keyframes right-arm-upper-3 {
+    0% {
+      transform: rotate(140deg) translateY(40px) translateX(60px) ;
+    }
+    50% {
+      transform: rotate(185deg) translateX(90px);
+    }
+    100% {
+      transform: rotate(235deg) translateX(60px) translateY(-80px);
+    }
+  }
+  @keyframes right-arm-lower-3 {
+    0% {
+      transform: rotate(140deg) translateY(40px) translateX(60px);
+    }
+    100% {
+      transform: rotate(180deg) translateX(110px) translateY(-10px);
+    }
+  }
+  @keyframes right-arm-upper-4 {
+    0% {
+      transform: rotate(235deg) translateX(60px) translateY(-80px);
+    }
+    100% {
+      transform: rotate(0deg) translateX(0px) translateY(0px);
+    }
+  }
+  @keyframes right-arm-lower-4 {
+    0% {
+      transform: rotate(180deg) translateX(110px) translateY(-10px);
+    }
+    100% {
+      transform: rotate(0deg) translateX(0px) translateY(0px);
+    }
+  }
+  // left arm animation
+  @keyframes left-arm-1 {
+    0% {
+      transform: rotate(0deg);
+    }
+    40% {
+      transform: rotate(-45deg) translate(40px, 70px);
+    }
+    100% {
+      transform: rotate(-90deg) translate(-10px, 60px);
+    }
+  }
+  @keyframes left-arm-2 {
+    0% {
+      transform: rotate(-90deg) translate(-10px, 60px);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(90deg) translateY(-30px);
+    }
+    100% {
+      transform: rotate(180deg) translateX(-45px);
+    }
+  }
+  @keyframes left-arm-upper-3 {
+    0% {
+      transform: rotate(180deg) translateX(-45px);
+    }
+    40% {
+      transform: rotate(180deg) translateX(-45px);
+    }
+    100% {
+      transform: rotate(235deg) translateX(0px) translateY(50px);
+    }
+  }
+  
+  @keyframes left-arm-lower-3 {
+    from {
+      transform: rotate(180deg) translateX(-45px);
+    }
+    to {
+      transform: rotate(230deg) translateX(0px) translateY(0px);
+    }
+  }
+  
+  @keyframes left-arm-4 {
+    from {
+      transform: rotate(270deg) translate(-20px, 120px);
+    }
+    to {
+      transform: rotate(240deg);
+    }
+  }
+  
+  @keyframes left-arm-5 {
+    0% {
+      transform: rotate(240deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  // legs animation
+  @keyframes right-thigh-1 {
+    0%{
+  
+    }
+    100% {
+      transform: translateX(-3%);
+    }
+  }
+  @keyframes right-thigh-2 {
+    0%{
+      transform: translateX(-3%);
+    }
+    50%{
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-28%);
+    }
+  }
+  @keyframes right-thigh-3 {
+    0%{
+      transform: translateX(-28%);
+    }
+    100% {
+      transform: translateX(-3%);
+    }
+  }
+  @keyframes left-thigh-1 {
+    0%{
+  
+    }
+    50% {
+      transform: translateX(8%);
+    }
+    100% {
+      transform: translateX(12%);
+    }
+  }
+  @keyframes left-thigh-2 {
+    0%{
+      transform: translateX(12%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(5%);
+    }
+  }
+  @keyframes left-calf-1 {
+    0%{
+      transform: scaleY(1.2) translateY(10px);
+    }
+    50% {
+      transform: rotate(8deg) scaleY(1.2) translateY(10px);
+    }
+    100% {
+      transform: rotate(12deg) scaleY(1.2) translateY(10px);
+    }
+  }
+  @keyframes left-calf-2 {
+    0%{
+      transform: rotate(12deg) scaleY(1.2) translateY(10px);
+    }
+    50% {
+      transform: rotate(0deg) scaleY(1.2) translateY(10px);
+    }
+    100% {
+      transform: rotate(5deg) scaleY(1.2) translateY(10px);
+    }
+  }
+  @keyframes right-calf-1 {
+    0%{
+  
+    }
+    50% {
+      transform: rotate(-1deg);
+    }
+    100% {
+      transform: rotate(-3deg);
+    }
+  }
+  @keyframes right-calf-2 {
+    0%{
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(-0deg);
+    }
+    100% {
+      transform: rotate(-35deg) translateX(20px) scaleY(1.2) translateY(10px);
+    }
+  }
+  @keyframes right-foot-2 {
+    0%{
+    }
+    10% {
+      transform: rotate(-0deg);
+    }
+    50% {
+      transform: rotate(-20deg) translateY(10px);
+    }
+    100% {
+      transform: rotate(-60deg) translateY(35px) translateX(0px) scaleX(1.3);
+    }
+  }
+  
+  // golf club animation
+  @keyframes swing-1 {
+    0% {
+      transform: rotate(0deg);
+    }
+    20% {
+      transform: rotate(-45deg) translateY(0px) translateX(30px);
+    }
+    55% {
+      transform: rotate(-90deg) translateY(40px) translateX(55px);
+    }
+    75% {
+      transform: rotate(-150deg) translateY(60px) translateX(10px);
+    }
+    100% {
+      transform: rotate(-240deg) translateY(10px) translateX(-60px);
+    }
+  }
+  
+  @keyframes swing-2 {
+    0% {
+      transform: rotate(-240deg) translateY(10px) translateX(-60px);
+    }
+    25% {
+      transform: rotate(-180deg) translateY(30px) translateX(10px);
+    }
+    50% {
+      transform: rotate(-60deg) translateY(-30px) translateX(10px);
+    }
+    75% {
+      transform: rotate(45deg) translateY(20px) translateX(-60px);
+    }
+    100% {
+      transform: rotate(210deg) translateY(45px) translateX(110px);
+    }
+  }
+  
+  @keyframes swing-3 {
+    0% {
+      transform: rotate(210deg) translateY(45px) translateX(110px);
+    }
+    50% {
+      transform: rotate(245deg) translateX(130px) translateY(0px);
+    }
+    100% {
+      transform: rotate(280deg) translateX(110px) translateY(-50px);
+    }
+  }
+  
+  @keyframes swing-4 {
+    0% {
+      transform: rotate(280deg) translateY(-50px) translateX(110px);
+    }
+    5% {
+      transform: rotate(300deg) translateY(-80px) translateX(90px);
+    }
+    100% {
+      transform: rotate(280deg) translateY(-50px) translateX(110px);
+    }
+  }
+  
+  @keyframes swing-5 {
+    0% {
+      transform: rotate(280deg) translateY(-50px) translateX(110px);
+    }
+    // 25% {
+    //   transform: rotate(180deg) translate(50px, 90px);
+    // }
+    // 40% {
+    //   transform: rotate(120deg) translate(0px, 90px);
+    // }
+    // 60% {
+    //   transform: rotate(60deg) translate(0px, 0px);
+    // }
+    // 70% {
+    //   transform: rotate(0deg) translate(0px, 0px);
+    // }
+    100% {
+      transform: rotate(0deg) translate(0px, 0px);
+    }
+  }
+  
+  @keyframes reset {
+    0% {
+      transform: rotate(0) translate(0 ,0) scale(1);
+    }
+    100% {
+      transform: rotate(0) translate(0 ,0) scale(1);
+    }
+  }
