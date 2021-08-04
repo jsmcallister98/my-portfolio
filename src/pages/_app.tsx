@@ -2,7 +2,7 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import React, { Fragment, useState } from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import 'src/components/Animations/Golf/Golfer.scss'
+import 'src/components/Golf/Golfer.scss'
 import { Navbar } from "src/components/Navbar/Navbar";
 // import { FoobarWrapper } from "components/foobar";
 import { sharedTransition } from "src/styles/components";
@@ -36,6 +36,15 @@ const GlobalStyles = createGlobalStyle`
 	--border-radius: 5px;
 	--transition-duration: 0.1s;
 	--color-pants: #36353d;
+	--header-dark: #D3D8FF;
+	--header-light: #D3D8FF;
+	--golf-ball: #FAFF00;
+	--color-flag-stick: #000;
+	--color-flag: #FF7373;
+	--color-sand: #EADCAB;
+	--color-water: #3E69D8;
+	--color-golf-green: #7ABB81;
+	--color-fringe: #417D47; 
 	}
 	[data-theme="dark"] {
 		--color-primary-accent: rgb(157, 134, 233);
@@ -46,6 +55,15 @@ const GlobalStyles = createGlobalStyle`
 		--color-inlineCode-bg: rgb(51, 51, 51);
 		--color-bg-blurred: rgba(15,10,35,0.9);
 		--color-pants: #77778c;
+		--header-dark: #1c1453;
+		--header-light: #f55238c9;
+		--golf-ball: #fff;
+		--color-flag-stick: #fff;
+		--color-flag: #0044AA;
+		--color-sand: #878069;
+		--color-water: #0044AA;
+		--color-golf-green: #07490D;
+		--color-fringe: #012C05; 
 	}
 	[data-theme="batman"] {
 		--color-primary-accent: rgb(255, 255, 0);
@@ -152,12 +170,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 			</Head>
 			<ThemeProvider theme={themeForContext}>
 				<GlobalStyles />
-				{/* <FoobarWrapper> */}
-					<Navbar />
-					{/* <Layout> */}
-						<Component {...pageProps} />
-					{/* </Layout> */}
-				{/* </FoobarWrapper> */}
+				<Navbar />
+				<Component {...pageProps} />
 			</ThemeProvider>
 		</Fragment>
 	);

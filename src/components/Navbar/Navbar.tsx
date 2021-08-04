@@ -336,12 +336,13 @@ const MobileMenuToggle = styled(IconContainer).attrs({ as: "button" })`
 `;
 
 const Header = styled.header`
-	position: sticky;
+	position: fixed;
+	z-index: 10;
 	top: 0;
 	width: 100%;
 	height: calc(40px + 2rem);
 	padding: 0 1rem;
-	background-color: var(--color-background);
+	background-color: transparent;
 	${sharedTransition}
 	${IconContainer}, ${ThemeSwitch}, ${MobileMenuToggle} {
 		z-index: 10;
@@ -349,7 +350,7 @@ const Header = styled.header`
 `;
 
 const HeaderInner = styled.div`
-	padding: 1rem 0;
+	padding: 2rem 1rem;
 	margin: 0 auto;
 	width: 100%;
 	max-width: var(--max-width);
@@ -399,7 +400,7 @@ const NavLinksDesktop = styled.div`
 
 const FullScreenWrapper = styled(motion.div)<{ visible: boolean }>`
 	height: 100vh;
-	width: 95vw;
+	width: 98vw;
 	background-color: var(--color-bg-blurred);
 	position: absolute;
 	top: 0;
@@ -410,6 +411,7 @@ const FullScreenWrapper = styled(motion.div)<{ visible: boolean }>`
 		visible
 			? css`
 					pointer-events: auto;
+					width: 100vw;
 			  `
 			: css`
 					pointer-events: none;

@@ -1,45 +1,62 @@
+import { useEffect } from 'react';
 import { useState } from 'react'
+import { Button } from 'src/styles/blog';
+import { BallFlight } from './BallFlight';
+import styled from "styled-components";
 
 const Golfer = () => {
     const [swing, setSwing] = useState(false);
+    const [flight, setFlight] = useState(false);
 
     const clickHandler = () => {
         setSwing(true);
+        setFlight(true);
         setTimeout(() => {
             setSwing(false);
         }, 3000);
+        setTimeout(() => {
+            setFlight(false);
+        }, 5200);
     }
 
+    useEffect(() => {
+      clickHandler()
+    }, []);
+
     return (
-      <div onClick={clickHandler}>
-          <div className="wrapper">
-              <div className={`swing ${swing ? 'animate' : ''}`}>
-                  <div className="swing-rod">
-                    <svg width="20" height="100" viewBox="0 0 38 232" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M30.6442 0.5C30.6442 0.5 29.5 0.499981 28.3173 1.50003C28.3174 5.00003 28.1438 7.8143 28.3173 12.5875C28.4907 17.3607 29.8782 40.5107 28.6441 53.5107C28.9909 56.2381 28.6641 63.647 29.8782 65.0107L30.6441 66.0107L34.1441 65.5107L34.7348 61.5107C34.7348 61.5107 34.5133 63.0107 34.7348 54.5107C34.2141 49.0558 34.2144 23.8398 34.7348 13.6108C34.7348 9.50003 34.7348 7.50003 34.7348 7.50003C34.7348 7.50003 34.7348 3.50003 34.7348 0.500005L30.6442 0.5Z" fill="var(--color-primary)"/>
-                      <path d="M37.8235 216.868C37.8235 216.868 35.0159 224.008 13.9786 230.92C3.49725 234.364 3.49727 227.176 1.40103 216.868C-0.695208 206.56 5.59354 206.689 12.1443 207.304C18.6951 207.919 16.0748 207.304 33.631 209.32C33.631 195.36 30 65.5 30 65.5C30 65.5 32.5953 64.6652 34.5 65.5C34.7581 70.7191 37.8235 216.868 37.8235 216.868Z" fill="url(#paint1_linear)"/>
-                      <path d="M8.99988 210.76L10.4148 225.393" stroke="#414042" strokeWidth="2" strokeMiterlimit="10"/>
-                      <path d="M9.74951 212.948L28.3807 213.982" stroke="#414042" strokeWidth="2" strokeMiterlimit="10"/>
-                      <path d="M9.8573 216.828L28.4359 215.851" stroke="#414042" strokeWidth="2" strokeMiterlimit="10"/>
-                      <path d="M10.4149 220.436L28.4359 217.395" stroke="#414042" strokeWidth="2" strokeMiterlimit="10"/>
-                      <path d="M10.4149 223.583L29.3012 218.916" stroke="#414042" strokeWidth="2" strokeMiterlimit="10"/>
-                      <defs>
-                      <linearGradient id="paint0_linear" x1="26.2942" y1="41.9921" x2="36.2519" y2="41.9921" gradientUnits="userSpaceOnUse">
-                      <stop offset="0.2184" stopColor="#2B2B2B"/>
-                      <stop offset="0.5415" stopColor="#222222"/>
-                      <stop offset="1" stopColor="#0D0D0D"/>
-                      </linearGradient>
-                      <linearGradient id="paint1_linear" x1="-13.0108" y1="161.842" x2="37.8234" y2="161.842" gradientUnits="userSpaceOnUse">
-                      <stop stopColor="#7D7D7D"/>
-                      <stop offset="0.977" stopColor="#A6A6A6"/>
-                      </linearGradient>
-                      </defs>
-                      </svg>
-                  </div>
-              </div>
+      <div>
+        <BallFlight>
+          <div className={`box parabolic3 ${flight ? 'animate' : ''}`}><i></i></div>
+        </BallFlight>
+        <div className="wrapper">
+            <div className={`swing ${swing ? 'animate' : ''}`}>
+                <div className="swing-rod">
+                  <svg width="20" height="100" viewBox="0 0 38 232" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.6442 0.5C30.6442 0.5 29.5 0.499981 28.3173 1.50003C28.3174 5.00003 28.1438 7.8143 28.3173 12.5875C28.4907 17.3607 29.8782 40.5107 28.6441 53.5107C28.9909 56.2381 28.6641 63.647 29.8782 65.0107L30.6441 66.0107L34.1441 65.5107L34.7348 61.5107C34.7348 61.5107 34.5133 63.0107 34.7348 54.5107C34.2141 49.0558 34.2144 23.8398 34.7348 13.6108C34.7348 9.50003 34.7348 7.50003 34.7348 7.50003C34.7348 7.50003 34.7348 3.50003 34.7348 0.500005L30.6442 0.5Z" fill="var(--color-primary)"/>
+                    <path d="M37.8235 216.868C37.8235 216.868 35.0159 224.008 13.9786 230.92C3.49725 234.364 3.49727 227.176 1.40103 216.868C-0.695208 206.56 5.59354 206.689 12.1443 207.304C18.6951 207.919 16.0748 207.304 33.631 209.32C33.631 195.36 30 65.5 30 65.5C30 65.5 32.5953 64.6652 34.5 65.5C34.7581 70.7191 37.8235 216.868 37.8235 216.868Z" fill="url(#paint1_linear)"/>
+                    <path d="M8.99988 210.76L10.4148 225.393" stroke="#414042" strokeWidth="2" strokeMiterlimit="10"/>
+                    <path d="M9.74951 212.948L28.3807 213.982" stroke="#414042" strokeWidth="2" strokeMiterlimit="10"/>
+                    <path d="M9.8573 216.828L28.4359 215.851" stroke="#414042" strokeWidth="2" strokeMiterlimit="10"/>
+                    <path d="M10.4149 220.436L28.4359 217.395" stroke="#414042" strokeWidth="2" strokeMiterlimit="10"/>
+                    <path d="M10.4149 223.583L29.3012 218.916" stroke="#414042" strokeWidth="2" strokeMiterlimit="10"/>
+                    <defs>
+                    <linearGradient id="paint0_linear" x1="26.2942" y1="41.9921" x2="36.2519" y2="41.9921" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.2184" stopColor="#2B2B2B"/>
+                    <stop offset="0.5415" stopColor="#222222"/>
+                    <stop offset="1" stopColor="#0D0D0D"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear" x1="-13.0108" y1="161.842" x2="37.8234" y2="161.842" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#7D7D7D"/>
+                    <stop offset="0.977" stopColor="#A6A6A6"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>
+                </div>
             </div>
+          </div>
+        <GolferWrapper>
           <div className="golfer-wrapper">
-            <svg className={`golfer ${swing ? 'animate' : ''}`} width="300" height="270" viewBox="0 0 173 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg onClick={clickHandler} className={`golfer ${swing ? 'animate' : ''}`} width="300" height="270" viewBox="0 0 173 540" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path className="left-calf" d="M39 527.57H54.8641L65.5 433.5H37L39 527.57Z" fill="var(--color-pants)"/>
               <path className="left-foot" d="M26.1629 538.23L55.9879 538.23L55.7123 523.346L43.1628 523.346C40.1628 523.346 34.1628 522.346 28.1628 528.542C25.6629 531.124 21.8726 536 26.1629 538.23Z" fill="var(--color-primary)"/>
               <path className="right-calf" d="M117 527.531L132.998 527.531L137 436L107.5 434L117 527.531Z" fill="var(--color-pants)"/>
@@ -59,8 +76,29 @@ const Golfer = () => {
               <path className="left-arm-upper" d="M37.7256 289.357L19.6309 229.837C19.4478 229.234 19.6051 228.441 20.2316 227.566C20.8548 226.697 21.8677 225.859 23.1181 225.213C23.8363 224.841 24.6058 224.547 25.3813 224.347C26.157 224.147 26.918 224.046 27.6196 224.047C28.3224 224.048 28.9412 224.152 29.4459 224.339C29.9503 224.526 30.318 224.789 30.5556 225.091L49.533 249.276L55.6206 282.141L37.7256 289.357Z" fill="var(--color-secondary-accent)" stroke=""/>
             </svg>
           </div>
+        </GolferWrapper>
+        {/* <div style={{position: 'absolute', zIndex: 5, top: 500, left: 1500}}><Button onClick={clickHandler}>Swing</Button></div> */}
       </div>
     )
 }
+
+const GolferWrapper = styled.div`
+  position: relative;
+  z-index: 4;
+  svg {
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    width: 200px;
+  }
+  // @media (max-width: 1350px) {
+  //   .golfer {
+  //     height: 20vw;
+  //     margin-top: 5vw;
+  //     // top: 420px;
+  //     // position: fixed;
+	// 	}
+	// }
+`;
 
 export default Golfer

@@ -1,9 +1,11 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import Head from 'next/head'
 import styled from 'styled-components';
-import { sharedTransition } from 'src/styles/components';
+import {sharedTransition, Tree, Trees } from 'src/styles/components';
+import { GolfScene, GolfSceneSVG, } from 'src/components/Golf/GolfScene'
 import { Button } from 'src/styles/blog';
-import Golfer from 'src/components/Animations/Golf/Golfer';
+import Golfer from 'src/components/Golf/Golfer';
+import {Wave, WaveSVG} from 'src/styles/components'
 
 export type iTheme = "light" | "dark";
 
@@ -21,19 +23,22 @@ const StyledPage = styled.div`
 const IndexPage = () => {
 
   return (
-
     <Fragment>
       <Head>
           <title>Jacob McAllister</title>
           <meta name="description" content="Jacob McAllister web developer portfolio" />
       </Head>
+      <GolfScene>
+        <GolfSceneSVG />
+      </GolfScene>
+      <Trees>
+        <Tree />
+      </Trees>
+      <Golfer />
+      <Wave>
+        <WaveSVG />
+      </Wave>
       <StyledPage>
-          <div>
-            <h1>Hello there</h1>
-            <p style={{ color: "var(--color-primary-accent)" }}>General Kenobi!</p>
-                    <Button>Button</Button>
-          </div>
-          <Golfer />
       </StyledPage>
     </Fragment>
   )
