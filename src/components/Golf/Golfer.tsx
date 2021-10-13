@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useState } from 'react'
-import { Button } from 'src/styles/blog';
 import { BallFlight } from './BallFlight';
 import styled from "styled-components";
 

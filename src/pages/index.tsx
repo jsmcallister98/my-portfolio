@@ -1,24 +1,12 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import Head from 'next/head'
-import styled from 'styled-components';
-import {sharedTransition, Tree, Trees } from 'src/styles/components';
+import {sharedTransition } from 'src/components/General';
 import { GolfScene, GolfSceneSVG, } from 'src/components/Golf/GolfScene'
-import { Button } from 'src/styles/blog';
 import Golfer from 'src/components/Golf/Golfer';
-import {Wave, WaveSVG} from 'src/styles/components'
+import {Tree, Trees} from 'src/components/Golf/Trees';
+import {Wave, WaveSVG} from 'src/components/Wave'
 
 export type iTheme = "light" | "dark";
-
-const StyledPage = styled.div`
-  ${sharedTransition}
-  height: 100vh;
-  width: 80%;
-  margin: auto;
-  padding: 0 1rem;
-  padding-top: 40px;
-  display: flex;
-  justify-content: space-around;
-`
 
 const IndexPage = () => {
 
@@ -38,8 +26,6 @@ const IndexPage = () => {
       <Wave>
         <WaveSVG />
       </Wave>
-      <StyledPage>
-      </StyledPage>
     </Fragment>
   )
 }

@@ -19,8 +19,8 @@ import { IoMdMoon } from "react-icons/io";
 import styled, { css, ThemeContext } from "styled-components";
 
 import Logo from "./Logo";
-import { IconContainer } from "src/styles/blog";
-import { sharedTransition } from "src/styles/components";
+import { IconContainer } from "src/components/Blog";
+import { sharedTransition } from "src/components/General";
 import { LinkTo } from "src/styles/typography";
 import { useBreakpointRange, useHasMounted } from "src/utils/hooks";
 import { breakpoint } from "src/utils/style";

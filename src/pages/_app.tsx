@@ -4,13 +4,9 @@ import React, { Fragment, useState } from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import 'src/components/Golf/Golfer.scss'
 import { Navbar } from "src/components/Navbar/Navbar";
-// import { FoobarWrapper } from "components/foobar";
-import { sharedTransition } from "src/styles/components";
-// import { Layout } from "styles/layouts";
+import { sharedTransition } from "src/components/General";
 import { TGlobalThemeObject } from "src/typings/styled";
 import { BASE_FONT_SIZE } from "src/utils/style";
-
-// import "assets/fonts/iosevka/iosevka.css";
 
 const GlobalStyles = createGlobalStyle`
 	:root {

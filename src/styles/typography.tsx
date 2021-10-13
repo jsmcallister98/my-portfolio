@@ -2,11 +2,6 @@ import Link, { LinkProps } from "next/link";
 import React, { PropsWithoutRef } from "react";
 import styled, { css } from "styled-components";
 
-export const ReallyBigTitle = styled.h1`
-	font-size: 8rem;
-	line-height: 1;
-`;
-
 export const TextGradientCSS = css`
 	background-image: linear-gradient(
 		90deg,

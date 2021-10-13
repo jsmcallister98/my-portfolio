@@ -1,49 +1,10 @@
-import { PropsWithChildren, ReactNode } from "react";
 import styled, { css } from "styled-components";
-
-import { sharedTransition } from "src/styles/components";
-import { PaddingListItems } from "src/styles/typography";
+import { sharedTransition } from "src/components/General";
 import { breakpoint } from "src/utils/style";
-
-export const removeListStyleMixin = css`
-	& ul {
-		list-style: none;
-		padding-left: 30px;
-	}
-`;
-
-export const BlogPostMDXContent = styled(PaddingListItems)`
-	padding: 30px 0;
-`;
 
 export const Card = styled.div`
 	padding: 10px 0;
 	cursor: pointer;
-`;
-
-export const WarningSpan = styled.span`
-	padding: 5px 10px;
-	margin: 0 15px;
-	background-color: red;
-	color: white;
-	border-radius: var(--border-radius);
-`;
-
-export const PostNotPublishedWarning = () => {
-	return <WarningSpan>UNPUBLISHED</WarningSpan>;
-};
-
-export const PostMetaDataGrid = styled.div`
-	display: grid;
-	grid-auto-flow: column;
-	gap: 0.5rem;
-	justify-content: start;
-	align-items: center;
-`;
-
-export const RoundedImageSmall = styled.img`
-	height: 25px;
-	border-radius: 50%;
 `;
 
 export const StyledPre = styled.pre`
@@ -106,30 +67,6 @@ export const Highlight = styled.span`
 	font-weight: bold;
 `;
 
-export const ReadMorePrompt = styled.p<{ isHovered: boolean }>`
-	font-weight: bold;
-	font-size: 0.8rem;
-	margin: 0;
-	color: ${({ isHovered }) => (isHovered ? "var(--color-primary-accent)" : null)};
-`;
-
-const EndLinksGrid = styled.div`
-	padding-top: 15px;
-	display: grid;
-	grid-auto-flow: column;
-	justify-content: space-between;
-	align-items: center;
-	font-size: 14px;
-	color: var(--color-primary-accent);
-	& * {
-		cursor: pointer;
-	}
-`;
-
-export const EndLinks = ({ children }: PropsWithChildren<ReactNode>) => (
-	<EndLinksGrid>{children}</EndLinksGrid>
-);
-
 export const Button = styled.button`
 	font-size: 18px;
 	cursor: pointer;
@@ -142,18 +79,5 @@ export const Button = styled.button`
 	&:hover {
 		background-color: var(--color-primary-accent);
 		color: var(--color-background);
-	}
-`;
-
-export const ButtonUnstyled = styled.button`
-	background-color: transparent;
-	border: none;
-	color: inherit;
-`;
-
-export const AnchorUnstyled = styled.a`
-	color: unset;
-	&:hover {
-		text-decoration: unset;
 	}
 `;
