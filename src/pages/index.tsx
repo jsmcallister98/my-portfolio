@@ -16,13 +16,17 @@ const IndexPage = () => {
           <title>Jacob McAllister</title>
           <meta name="description" content="Jacob McAllister web developer portfolio" />
       </Head>
-      <GolfScene>
-        <GolfSceneSVG />
-      </GolfScene>
-      <Trees>
-        <Tree />
-      </Trees>
-      <Golfer />
+      <div 
+      // style={{display: 'none'}}
+      >
+        <GolfScene>
+          <GolfSceneSVG />
+        </GolfScene>
+        <Trees>
+          <Tree />
+        </Trees>
+        <Golfer />
+      </div>
       <Wave>
         <WaveSVG />
       </Wave>

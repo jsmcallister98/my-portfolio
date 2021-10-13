@@ -81,10 +81,10 @@ const NavLinks = () => {
 					<NavLink href="/projects">projects</NavLink>
 				</motion.li>
 				<motion.li variants={textLinksVariants}>
-					<NavLink href="/blog">blog</NavLink>
+					<NavLink href="/contact">contact</NavLink>
 				</motion.li>
 				<motion.li variants={textLinksVariants}>
-					<NavLink href="/contact">contact</NavLink>
+					<NavLink href="/blog">blog</NavLink>
 				</motion.li>
 			</PageLinks>
 			<IconLinks>
@@ -124,10 +124,10 @@ const DesktopNavLinks = () => {
 					<NavLink href="/projects">projects</NavLink>
 				</motion.li>
 				<motion.li variants={textLinksVariants}>
-					<NavLink href="/blog">blog</NavLink>
+					<NavLink href="/contact">contact</NavLink>
 				</motion.li>
 				<motion.li variants={textLinksVariants}>
-					<NavLink href="/contact">contact</NavLink>
+					<NavLink href="/blog">blog</NavLink>
 				</motion.li>
 			</FlexNavLinks>
 			<FlexNavLinks>
